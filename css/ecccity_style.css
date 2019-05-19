@@ -1,0 +1,51 @@
+.edu_city{
+    border: 1px solid #3498db;
+    background: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: Arial;
+    cursor: pointer;
+    margin: 5px;
+    color: #3498db;
+    transition: 0.8s;
+    overflow: hidden;
+    position: relative;
+    height: 85px;
+    width: 200px;
+    font-weight: bold;
+    float: left;
+}
+.edu_city:hover{
+    color: #fff;
+    background: #3498db;
+}
+.edu_city::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: #3498db;
+    z-index: -1;
+    transition: 0.8s;
+}
+/*#btn_group_1, #btn_group_2{*/
+    /*width: 100%;*/
+    /*overflow-y: auto;*/
+
+/*}*/
+#edu_btn1::before,#edu_btn3::before,#edu_btn5::before,#edu_btn7::before,#edu_btn9::before{
+    top: 0;
+    border-radius: 0 0 50% 50%;
+}
+#edu_btn2::before,#edu_btn4::before,#edu_btn6::before,#edu_btn8::before,#edu_btn10::before{
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+}
+.edu_city:hover::before{
+    height: 180%;
+}
+.edu_city:focus{
+    background: #3498db;
+    color: #f1f1f1;
+}
